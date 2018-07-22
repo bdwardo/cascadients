@@ -76,61 +76,59 @@ let gradients = [
   }
 ]
 
-gradients.map(obj => {
-  let gradientClass = obj.gradient;
-  let allGradients = document.querySelector(gradientClass);
-  let gradientValue = 'linear-gradient(' + obj.color1 + ', ' + obj.color2 + ')';
-  allGradients.setAttribute('data-clipboard-text', 'background: ' + gradientValue);
-  let children = allGradients.childNodes[1];
+gradients.forEach(obj => {
+  const gradientClass = obj.gradient;
+  const allGradients = document.querySelector(gradientClass);
 
-  // change gradient styles for each container
+  const gradientValue = 'linear-gradient(' + obj.color1 + ', ' + obj.color2 + ')';
+  allGradients.setAttribute('data-clipboard-text', 'background: ' + gradientValue);
+  const children = allGradients.childNodes[1];
+
   children.style.background = gradientValue;
   children.style.boxShadow = "0px 10px 24px -2px " + hexToRgbA(obj.color2);
 });
 
-// convert hex to rgba 
+// Convert rgb to hex
 function hexToRgbA(hex){
-    var c;
-    if(/^#([A-Fa-f0-9]{3}){1,2}$/.test(hex)){
-        c= hex.substring(1).split('');
-        if(c.length== 3){
-            c= [c[0], c[0], c[1], c[1], c[2], c[2]];
-        }
-        c= '0x'+c.join('');
-        return 'rgba('+[(c>>16)&255, (c>>8)&255, c&255].join(',')+',0.6)';
-    }
-    throw new Error('Bad Hex');
+  let c;
+  if(/^#([A-Fa-f0-9]{3}){1,2}$/.test(hex)){
+    c = hex.substring(1).split('');
+  if(c.length== 3){
+    c = [c[0], c[0], c[1], c[1], c[2], c[2]];
+  }
+  c = '0x'+c.join('');
+  return 'rgba('+[(c>>16)&255, (c>>8)&255, c&255].join(',')+',0.6)';
+  }
+  throw new Error('Bad Hex');
 }
 
-let containerBtn = document.querySelectorAll('.code');
+const containerBtn = document.querySelectorAll('.code');
 
-containerBtn.forEach(e => {
-  e.addEventListener("click", () => {
-    let childContainer = e.children[0];
+containerBtn.forEach(container => {
+  container.addEventListener("click", () => {
+    const childContainer = container.children[0];
     childContainer.classList.add("copied");
 
-    setTimeout(function() {
+    setTimeout(() => {
       childContainer.classList.remove("copied");
-    }, 1000);
+    }, 800);
   });
 });
 
-let clipboard = new ClipboardJS('.code');
+const clipboard = new ClipboardJS('.code');
 
-clipboard.on('success', function(e) {
-  console.info('Text:', e.text);
+clipboard.on('success', (e) => {
+  console.info('Gradient CSS:', e.text);
 });
-clipboard.on('error', function(e) {
+clipboard.on('error', (e) => {
     console.log(e);
 });
 
+const colorSelect = document.querySelectorAll('.color-select');
 
-let colorSelect = document.querySelectorAll('.color-select');
-
-
-colorSelect.forEach(function(e) {
-  e.addEventListener('click' , function() {
-      let red = e.classList.contains('red');
-      let blueGradient = document.querySelector('#blue');
+colorSelect.forEach((color) => {
+  color.addEventListener('click' , (e) => {
+    const red = color.classList.contains('red');
+    const blueGradient = document.querySelector('#blue');
   });
 });

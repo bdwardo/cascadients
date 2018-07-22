@@ -30,8 +30,8 @@ body {
   display: inline-block;
 }
 
-.red {
-  background: #ff0844;
+.purple {
+  background: #6a11cb;
 }
 
 .blue {
@@ -57,7 +57,7 @@ body {
 .highlight {
   height: 20px;
   width: 250px;
-  background: linear-gradient(90deg, #ffb199, #ff0844);
+  background: linear-gradient(90deg, #ffb199, #6a11cb);
   position: absolute;
   top: 0.75em;
   left: 0.75rem;
