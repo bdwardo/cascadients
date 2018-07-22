@@ -191,24 +191,42 @@ body {
 
 
 @media (max-width: 1080px) {
-  .main {
-      justify-content: space-between;
-  }
+
+    .main {
+        justify-content: space-between;
+    }
 
     .code {
-      width: 46%;
-      // margin: 0 0 10px 0;
+    width: 46%;
     }
 }
 
+@media only screen and (max-device-width: 480px) {
 
-@media (max-width: 770px) {
-  .main {
-    display: block;
-    padding: 1em;
-    .code {
-      width: 100%;
-      // margin: 0 0 10px 0;
+    .main {
+        display: block;
+        padding: 1em;
     }
-  }
+
+    .code {
+    width: 100%;
+    margin: 0 0 1rem;
+    }
+
+    .header svg {
+        max-width: 360px;
+    }
+
+    .container {
+        max-height: 360px;
+    }
+
+    .container .name {
+        font-size: 3rem;
+        margin: 0 20px 20px 0;
+    }
+
+    .inner-container {
+        display: none;
+    }
 }

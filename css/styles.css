@@ -167,13 +167,32 @@ body {
     width: 46%;
   }
 }
-@media (max-width: 770px) {
+@media only screen and (max-device-width: 480px) {
   .main {
     display: block;
     padding: 1em;
   }
-  .main .code {
+
+  .code {
     width: 100%;
+    margin: 0 0 1rem;
+  }
+
+  .header svg {
+    max-width: 360px;
+  }
+
+  .container {
+    max-height: 360px;
+  }
+
+  .container .name {
+    font-size: 3rem;
+    margin: 0 20px 20px 0;
+  }
+
+  .inner-container {
+    display: none;
   }
 }
 
