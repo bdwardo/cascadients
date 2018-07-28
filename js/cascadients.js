@@ -51,8 +51,8 @@ let gradients = [
   },
   {
     gradient: '.gradient-11',
-    color1: '#21d4fd',
-    color2: '#b721ff'
+    color1: '#ec77ab',
+    color2: '#7873f5'
   },
   {
     gradient: '.gradient-12',
@@ -61,18 +61,68 @@ let gradients = [
   },
   {
     gradient: '.gradient-13',
-    color1: '#84fab0',
-    color2: '#8fd3f4'
+    color1: '#cc208e',
+    color2: '#6713d2'
   },
   {
     gradient: '.gradient-14',
-    color1: '#90F7EC',
-    color2: '#32CCBC'
+    color1: '#7579ff',
+    color2: '#b224ef'
   },
   {
     gradient: '.gradient-15',
-    color1: '#FFFB7D',
-    color2: '#85FFBD'
+    color1: '#bfd9fe',
+    color2: '#df89b5'
+  },
+  {
+    gradient: '.gradient-16',
+    color1: '#52E5E7',
+    color2: '#130CB7'
+  },
+  {
+    gradient: '.gradient-17',
+    color1: '#97ABFF',
+    color2: '#123597'
+  },
+  {
+    gradient: '.gradient-18',
+    color1: '#2AFADF',
+    color2: '#4C83FF'
+  },
+  {
+    gradient: '.gradient-19',
+    color1: '#6B73FF',
+    color2: '#000DFF'
+  },
+  {
+    gradient: '.gradient-20',
+    color1: '#72EDF2',
+    color2: '#5151E5'
+  },
+  {
+    gradient: '.gradient-21',
+    color1: '#5EFCE8',
+    color2: '#736EFE'
+  },
+  {
+    gradient: '.gradient-22',
+    color1: '#ABDCFF',
+    color2: '#0396FF'
+  },
+  {
+    gradient: '.gradient-23',
+    color1: '#c2e9fb',
+    color2: '#a1c4fd'
+  },
+  {
+    gradient: '.gradient-24',
+    color1: '#89f7fe',
+    color2: '#66a6ff'
+  },
+  {
+    gradient: '.gradient-25',
+    color1: '#a3bded',
+    color2: '#6991c7'
   }
 ]
 
@@ -132,3 +182,10 @@ colorSelect.forEach((color) => {
     const blueGradient = document.querySelector('#blue');
   });
 });
+
+let aqua = document.getElementById('#aqua');
+let aquaBtn = document.querySelector('.aqua');
+
+aquaBtn.addEventListener('click', (e) => { scrollTo(aqua, e) }, false);
+
+
