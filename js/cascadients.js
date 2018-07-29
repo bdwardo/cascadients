@@ -123,6 +123,56 @@ let gradients = [
     gradient: '.gradient-25',
     color1: '#a3bded',
     color2: '#6991c7'
+  },
+  {
+    gradient: '.gradient-26',
+    color1: '#A7BFE8',
+    color2: '#6190E8'
+  },
+  {
+    gradient: '.gradient-27',
+    color1: '#B2FEFA',
+    color2: '#0ED2F7'
+  },
+  {
+    gradient: '.gradient-28',
+    color1: '#06BCFB',
+    color2: '#4884EE'
+  },
+  {
+    gradient: '.gradient-29',
+    color1: '#83EAF1',
+    color2: '#63A4FF'
+  },
+  {
+    gradient: '.gradient-30',
+    color1: '#36D1DC',
+    color2: '#5B86E5'
+  },
+  {
+    gradient: '.gradient-31',
+    color1: '#7CFFCB',
+    color2: '#74F2CE'
+  },
+  {
+    gradient: '.gradient-32',
+    color1: '#7EE8FA',
+    color2: '#80FF72'
+  },
+  {
+    gradient: '.gradient-33',
+    color1: '#96E4DF',
+    color2: '#4DCCC6'
+  },
+  {
+    gradient: '.gradient-34',
+    color1: '#CEF576',
+    color2: '#84FB95'
+  },
+  {
+    gradient: '.gradient-35',
+    color1: '#42FCDB',
+    color2: '#3EE577'
   }
 ]
 
