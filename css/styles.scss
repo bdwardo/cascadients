@@ -6,6 +6,7 @@ $maxWidth: 1200px;
 $borderWidth: 5px;
 $base1: #ffb199;
 $base2: #6a11cb;
+$base3: #b285e4;
 
 // .footer {
 //     width: 100%;
@@ -13,6 +14,23 @@ $base2: #6a11cb;
 
 body {
     margin: 0;
+    font-family: 'PT Mono', monospace;
+    color: #999;
+}
+
+p {
+    line-height: 1.45rem;
+    padding: 0 1em;
+    font-size: 14px;
+}
+
+a {
+    color: $base3;
+    transition: all 0.3s;
+
+    &:hover {
+        color: $base2;
+    }
 }
 
 .display-none {
@@ -22,7 +40,7 @@ body {
 .all {
     font-size: 1rem;
     font-family: 'PT Mono', monospace;
-    color: #d1bcee;
+    color: $base3;
     width: auto !important;
     vertical-align: top;
     margin: 10px 10px 0;
@@ -48,7 +66,7 @@ body {
   text-align: left;
   font-size: 2rem;
   color: #6a11cb;
-  
+  z-index: 100;
   
   .color-select {
     // background: #ddd;
@@ -59,8 +77,6 @@ body {
     display: inline-block;
     transition: all 0.5s;
   }
-
-
 
   a:focus .color-select {
       border: $borderWidth solid rgba(255,255,255, 0.75);
@@ -77,6 +93,14 @@ body {
         }
       }
   }
+}
+
+.fa-github {
+    font-size: 1.6rem;
+    width: 60px;
+    position: absolute;
+    right: 1em;
+    top: 1em;
 }
 
 .purple {
@@ -115,6 +139,7 @@ body {
   width: 100%;
   margin: 4em auto;
   position: relative;
+  text-align: center;
   
   svg {
     max-width: 200px;
@@ -127,14 +152,8 @@ body {
 
 .highlight {
   height: 20px;
-  width: 250px;
-  background: linear-gradient(90deg, $base1, $base2);
-  position: absolute;
-  top: 0.75em;
-  left: 0.75rem;
-  z-index: -1;
-  margin: 0 auto;
-  opacity: 0.4;
+  width: auto;
+  background: rgba($base3, 0.15);
 }
 
 .main {
@@ -199,13 +218,12 @@ body {
   }
 }
 
-.copied {
-}
-
 .copied:before {
     color: #999;
     content: 'Copied!';
+    text-align: center;
     font-family: 'PT Mono', monospace;
+    font-size: 1em;
     background: #fff;
     padding: 10px;
     border-radius: 4px;
@@ -279,6 +297,22 @@ body {
     }
 
     .inner-container {
+        display: none;
+    }
+
+    .copied:before {
+        font-size: 2.5em;
+        width: 200px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-device-width: 768px) {
+
+    #fixed-footer {
         display: none;
     }
 }
