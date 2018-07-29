@@ -4,3 +4,4 @@
 .Rhistory
 .RData
 *.css.map
+css/*.css.map
