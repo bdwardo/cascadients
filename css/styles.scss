@@ -3,6 +3,7 @@
 
 
 $maxWidth: 1200px;
+$borderWidth: 5px;
 $base1: #ffb199;
 $base2: #6a11cb;
 
@@ -16,6 +17,20 @@ body {
 
 .display-none {
   display: none !important;
+}
+
+.all {
+    font-size: 1rem;
+    font-family: 'PT Mono', monospace;
+    color: #d1bcee;
+    width: auto !important;
+    vertical-align: top;
+    margin-top: 6px;
+    transition: all 0.3s;
+
+    &:hover {
+        color: $base2;
+    }
 }
 
 #fixed-footer {
@@ -35,11 +50,28 @@ body {
   
   .color-select {
     // background: #ddd;
-    height: 30px;
-    width: 30px;
+    height: 28px;
+    width: 28px;
     border-radius: 50%;
-    border: 3px solid #fff;
+    border: $borderWidth solid #fff;
     display: inline-block;
+    transition: all 0.5s;
+  }
+
+  a:focus .color-select {
+      border: $borderWidth solid rgba(255,255,255, 0.75);
+  }
+
+  &:hover {
+
+      .color-select {
+
+        opacity: 0.2;
+
+        &:hover {
+            opacity: 1 !important;
+        }
+      }
   }
 }
 
@@ -57,6 +89,22 @@ body {
 
 .green {
     background: #56E39F;
+}
+
+.yellow {
+    background: #FDEB71;
+}
+
+.orange {
+    background: #F7971E;
+}
+
+.red {
+    background: #ef473a;
+}
+
+.pink {
+    background: #FC5296;
 }
 
 .header {

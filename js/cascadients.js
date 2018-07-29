@@ -173,6 +173,206 @@ let gradients = [
     gradient: '.gradient-35',
     color1: '#42FCDB',
     color2: '#3EE577'
+  },
+  {
+    gradient: '.gradient-36',
+    color1: '#5AFF15',
+    color2: '#00B712'
+  },
+  {
+    gradient: '.gradient-37',
+    color1: '#3BB78F',
+    color2: '#0BAB64'
+  },
+  {
+    gradient: '.gradient-38',
+    color1: '#98DE5B',
+    color2: '#08E1AE'
+  },
+  {
+    gradient: '.gradient-39',
+    color1: '#F6FBA2',
+    color2: '#20DED3'
+  },
+  {
+    gradient: '.gradient-40',
+    color1: '#E2FF7D',
+    color2: '#85FFBD'
+  },
+  {
+    gradient: '.gradient-41',
+    color1: '#F9FF7D',
+    color2: '#BEFF85'
+  },
+  {
+    gradient: '.gradient-42',
+    color1: '#FFFEC1',
+    color2: '#FFF79C'
+  },
+  {
+    gradient: '.gradient-43',
+    color1: '#F9FF60',
+    color2: '#FFEF77'
+  },
+  {
+    gradient: '.gradient-44',
+    color1: '#FDEB71',
+    color2: '#F8D800'
+  },
+  {
+    gradient: '.gradient-45',
+    color1: '#FFDD00',
+    color2: '#FBB034'
+  },
+  {
+    gradient: '.gradient-46',
+    color1: '#FFD200',
+    color2: '#F7971E'
+  },
+  {
+    gradient: '.gradient-47',
+    color1: '#ffcc33',
+    color2: '#ffb347'
+  },
+  {
+    gradient: '.gradient-48',
+    color1: '#f6d365',
+    color2: '#fda085'
+  },
+  {
+    gradient: '.gradient-49',
+    color1: '#FFC600',
+    color2: '#FD6E6A'
+  },
+  {
+    gradient: '.gradient-50',
+    color1: '#FFCC2F',
+    color2: '#EF5734'
+  },
+  {
+    gradient: '.gradient-51',
+    color1: '#f7b733',
+    color2: '#fc4a1a'
+  },
+  {
+    gradient: '.gradient-52',
+    color1: '#FFC837',
+    color2: '#FF8008'
+  },
+  {
+    gradient: '.gradient-53',
+    color1: '#EC9F05',
+    color2: '#FF4E00'
+  },
+  {
+    gradient: '.gradient-54',
+    color1: '#F9D423',
+    color2: '#e65c00'
+  },
+  {
+    gradient: '.gradient-55',
+    color1: '#F09819',
+    color2: '#FF512F'
+  },
+  {
+    gradient: '.gradient-56',
+    color1: '#FF7D14',
+    color2: '#F94327'
+  },
+  {
+    gradient: '.gradient-57',
+    color1: '#FFBE0B',
+    color2: '#F42B03'
+  },
+  {
+    gradient: '.gradient-58',
+    color1: '#FF0000',
+    color2: '#990000'
+  },
+  {
+    gradient: '.gradient-59',
+    color1: '#ef473a',
+    color2: '#cb2d3e'
+  },
+  {
+    gradient: '.gradient-60',
+    color1: '#DC281E',
+    color2: '#F00000'
+  },
+  {
+    gradient: '.gradient-61',
+    color1: '#EA384D',
+    color2: '#D31027'
+  },
+  {
+    gradient: '.gradient-62',
+    color1: '#ED213A',
+    color2: '#93291E'
+  },
+  {
+    gradient: '.gradient-63',
+    color1: '#f85032',
+    color2: '#e73827'
+  },
+  {
+    gradient: '.gradient-64',
+    color1: '#e35d5b',
+    color2: '#e53935'
+  },
+  {
+    gradient: '.gradient-65',
+    color1: '#F45C43',
+    color2: '#EB3349'
+  },
+  {
+    gradient: '.gradient-66',
+    color1: '#DD2476',
+    color2: '#FF512F'
+  },
+  {
+    gradient: '.gradient-67',
+    color1: '#ffb199',
+    color2: '#ff0844'
+  },
+  {
+    gradient: '.gradient-68',
+    color1: '#F71735',
+    color2: '#DB3445'
+  },
+  {
+    gradient: '.gradient-69',
+    color1: '#fe9a8b',
+    color2: '#f9748f'
+  },
+  {
+    gradient: '.gradient-70',
+    color1: '#FC5296',
+    color2: '#F67062'
+  },
+  {
+    gradient: '.gradient-71',
+    color1: '#f093fb',
+    color2: '#f5576c'
+  },
+  {
+    gradient: '.gradient-72',
+    color1: '#ff7eb3',
+    color2: '#ff758c'
+  },
+  {
+    gradient: '.gradient-73',
+    color1: '#fe5196',
+    color2: '#f77062'
+  },
+  {
+    gradient: '.gradient-74',
+    color1: '#fdd6bd',
+    color2: '#f794a4'
+  },
+  {
+    gradient: '.gradient-75',
+    color1: '#FFD3A5',
+    color2: '#FD6585'
   }
 ]
 
@@ -225,17 +425,16 @@ clipboard.on('error', (e) => {
 });
 
 const colorSelect = document.querySelectorAll('.color-select');
+const codeContainer = document.querySelectorAll('.code');
 
 colorSelect.forEach((color) => {
   color.addEventListener('click' , (e) => {
-    const red = color.classList.contains('red');
-    const blueGradient = document.querySelector('#blue');
+    e.preventDefault();
+    let colorTag = color.classList[1] + '-tag';
+
+    codeContainer.forEach((tags) => {
+      tags.style.display = "initial";
+      (tags.classList.contains(colorTag)) ? true : tags.style.display = 'none';
+    });
   });
 });
-
-let aqua = document.getElementById('#aqua');
-let aquaBtn = document.querySelector('.aqua');
-
-aquaBtn.addEventListener('click', (e) => { scrollTo(aqua, e) }, false);
-
-

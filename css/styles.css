@@ -1,12 +1,21 @@
 @import url(https://use.fontawesome.com/releases/v5.1.1/css/all.css);
 @import url("https://fonts.googleapis.com/css?family=PT+Mono");
 body {
-  margin: 0;
-}
+  margin: 0; }
 
 .display-none {
-  display: none !important;
-}
+  display: none !important; }
+
+.all {
+  font-size: 1rem;
+  font-family: 'PT Mono', monospace;
+  color: #d1bcee;
+  width: auto !important;
+  vertical-align: top;
+  margin-top: 6px;
+  transition: all 0.3s; }
+  .all:hover {
+    color: #6a11cb; }
 
 #fixed-footer {
   background: rgba(255, 255, 255, 0.8);
@@ -20,43 +29,54 @@ body {
   z-index: 1;
   text-align: left;
   font-size: 2rem;
-  color: #6a11cb;
-}
-#fixed-footer .color-select {
-  height: 30px;
-  width: 30px;
-  border-radius: 50%;
-  border: 3px solid #fff;
-  display: inline-block;
-}
+  color: #6a11cb; }
+  #fixed-footer .color-select {
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    display: inline-block;
+    transition: all 0.5s; }
+  #fixed-footer a:focus .color-select {
+    border: 5px solid rgba(255, 255, 255, 0.75); }
+  #fixed-footer:hover .color-select {
+    opacity: 0.2; }
+    #fixed-footer:hover .color-select:hover {
+      opacity: 1 !important; }
 
 .purple {
-  background: #6a11cb;
-}
+  background: #6a11cb; }
 
 .blue {
-  background: #2575fc;
-}
+  background: #2575fc; }
 
 .aqua {
-  background: #84fab0;
-}
+  background: #84fab0; }
 
 .green {
-  background: #56E39F;
-}
+  background: #56E39F; }
+
+.yellow {
+  background: #FDEB71; }
+
+.orange {
+  background: #F7971E; }
+
+.red {
+  background: #ef473a; }
+
+.pink {
+  background: #FC5296; }
 
 .header {
   width: 100%;
   margin: 4em auto;
-  position: relative;
-}
-.header svg {
-  max-width: 200px;
-  margin: 0 auto;
-  display: block;
-  position: relative;
-}
+  position: relative; }
+  .header svg {
+    max-width: 200px;
+    margin: 0 auto;
+    display: block;
+    position: relative; }
 
 .highlight {
   height: 20px;
@@ -67,28 +87,24 @@ body {
   left: 0.75rem;
   z-index: -1;
   margin: 0 auto;
-  opacity: 0.4;
-}
+  opacity: 0.4; }
 
 .main {
   display: flex;
   flex-wrap: wrap;
   max-width: 1200px;
-  margin: 0 auto 6em;
-}
+  margin: 0 auto 6em; }
 
 .code {
   width: calc(100% * (1/6) - 10px - 1px);
   flex-grow: 1;
   margin: 0.75rem;
   cursor: pointer;
-  text-decoration: none;
-}
-.code:hover .inner-container {
-  border-top: 180px solid transparent;
-  border-bottom: 0;
-  border-right: 180px solid rgba(255, 255, 255, 0.2);
-}
+  text-decoration: none; }
+  .code:hover .inner-container {
+    border-top: 180px solid transparent;
+    border-bottom: 0;
+    border-right: 180px solid rgba(255, 255, 255, 0.2); }
 
 .container {
   height: 40vh;
@@ -97,34 +113,31 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  position: relative;
-}
-.container .inner-container {
-  align-self: flex-end;
-  width: 0;
-  height: 0;
-  border-top: 70px solid transparent;
-  border-bottom: 0;
-  border-right: 70px solid rgba(255, 255, 255, 0.2);
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  transition: all 0.2s ease-in-out;
-}
-.container .name {
-  color: #fff;
-  font-size: 1.2rem;
-  position: relative;
-  display: block;
-  text-align: right;
-  z-index: 1;
-  margin: 0 10px 10px 0;
-}
+  position: relative; }
+  .container .inner-container {
+    align-self: flex-end;
+    width: 0;
+    height: 0;
+    border-top: 70px solid transparent;
+    border-bottom: 0;
+    border-right: 70px solid rgba(255, 255, 255, 0.2);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transition: all 0.2s ease-in-out; }
+  .container .name {
+    color: #fff;
+    font-size: 1.2rem;
+    position: relative;
+    display: block;
+    text-align: right;
+    z-index: 1;
+    margin: 0 10px 10px 0; }
 
 .copied:before {
   color: #999;
-  content: "Copied!";
-  font-family: "PT Mono", monospace;
+  content: 'Copied!';
+  font-family: 'PT Mono', monospace;
   background: #fff;
   padding: 10px;
   border-radius: 4px;
@@ -139,61 +152,44 @@ body {
   /* Opera */
   animation: cssAnimation 0s ease-in 2s forwards;
   -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
-}
+  animation-fill-mode: forwards; }
 
 @keyframes cssAnimation {
   to {
     width: 0;
     height: 0;
     padding: 0;
-    overflow: hidden;
-  }
-}
+    overflow: hidden; } }
 @-webkit-keyframes cssAnimation {
   to {
     width: 0;
     height: 0;
     padding: 0;
-    visibility: hidden;
-  }
-}
+    visibility: hidden; } }
 @media (max-width: 1080px) {
   .main {
-    justify-content: space-between;
-  }
+    justify-content: space-between; }
 
   .code {
-    width: 46%;
-  }
-}
+    width: 46%; } }
 @media only screen and (max-device-width: 480px) {
   .main {
     display: block;
-    padding: 1em;
-  }
+    padding: 1em; }
 
   .code {
     width: 100%;
-    margin: 0 0 1rem;
-  }
+    margin: 0 0 1rem; }
 
   .header svg {
-    max-width: 360px;
-  }
+    max-width: 360px; }
 
   .container {
-    max-height: 360px;
-  }
+    max-height: 360px; }
 
   .container .name {
     font-size: 3rem;
-    margin: 0 20px 20px 0;
-  }
+    margin: 0 20px 20px 0; }
 
   .inner-container {
-    display: none;
-  }
-}
-
-/*# sourceMappingURL=styles.css.map */
+    display: none; } }
