@@ -8,10 +8,6 @@ $base1: #ffb199;
 $base2: #6a11cb;
 $base3: #b285e4;
 
-// .footer {
-//     width: 100%;
-// }
-
 body {
     margin: 0;
     font-family: 'PT Mono', monospace;
@@ -55,7 +51,6 @@ a {
 #fixed-footer {
   background: rgba(#fff, 0.8);
   box-shadow: 0 -2px 12px 4px rgba(0,0,0,0.05);
-  // height: 60px;
   padding: 0.6em 0;
   width: 100%;
   position: fixed;
@@ -69,7 +64,6 @@ a {
   z-index: 100;
   
   .color-select {
-    // background: #ddd;
     height: 28px;
     width: 28px;
     border-radius: 50%;
@@ -79,19 +73,18 @@ a {
   }
 
   a:focus .color-select {
-      border: $borderWidth solid rgba(255,255,255, 0.75);
+    border: $borderWidth solid rgba(255,255,255, 0.75);
   }
 
   &:hover {
 
-      .color-select {
-
+    .color-select {
         opacity: 0.2;
 
         &:hover {
             opacity: 1 !important;
         }
-      }
+    }
   }
 }
 
@@ -160,7 +153,6 @@ a {
   display: flex;
   // justify-content: space-between;
   flex-wrap: wrap;
-  // width: 1080px;
   max-width: $maxWidth;
   margin: 0 auto 6em;
 }
@@ -177,13 +169,17 @@ a {
     border-bottom: 0;
     border-right: 180px solid rgba(#fff,0.2);
   }
+
+  &:hover .container .name {
+    margin: 0 10px 20px 0;
+    opacity: 1;
+  }
 }
 
 
 
 .container {
   height: 40vh;
-  // width: 32%;
   max-height: 260px;
   border-radius: 6px;
   // flex: 1;
@@ -213,8 +209,9 @@ a {
     display: block;
     text-align:right;
     z-index: 1;
-    margin: 0 10px 10px 0;
-    
+    margin: 0 10px 0;
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
   }
 }
 

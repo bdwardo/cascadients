@@ -2,41 +2,34 @@
 @import url("https://fonts.googleapis.com/css?family=PT+Mono");
 body {
   margin: 0;
-  font-family: "PT Mono", monospace;
-  color: #999;
-}
+  font-family: 'PT Mono', monospace;
+  color: #999; }
 
 p {
   line-height: 1.45rem;
   padding: 0 1em;
-  font-size: 14px;
-}
+  font-size: 14px; }
 
 a {
   color: #b285e4;
-  transition: all 0.3s;
-}
-a:hover {
-  color: #6a11cb;
-}
+  transition: all 0.3s; }
+  a:hover {
+    color: #6a11cb; }
 
 .display-none {
-  display: none !important;
-}
+  display: none !important; }
 
 .all {
   font-size: 1rem;
-  font-family: "PT Mono", monospace;
+  font-family: 'PT Mono', monospace;
   color: #b285e4;
   width: auto !important;
   vertical-align: top;
   margin: 10px 10px 0;
   transition: all 0.3s;
-  border: none !important;
-}
-.all:hover {
-  color: #6a11cb;
-}
+  border: none !important; }
+  .all:hover {
+    color: #6a11cb; }
 
 #fixed-footer {
   background: rgba(255, 255, 255, 0.8);
@@ -51,104 +44,87 @@ a:hover {
   text-align: left;
   font-size: 2rem;
   color: #6a11cb;
-  z-index: 100;
-}
-#fixed-footer .color-select {
-  height: 28px;
-  width: 28px;
-  border-radius: 50%;
-  border: 5px solid #fff;
-  display: inline-block;
-  transition: all 0.5s;
-}
-#fixed-footer a:focus .color-select {
-  border: 5px solid rgba(255, 255, 255, 0.75);
-}
-#fixed-footer:hover .color-select {
-  opacity: 0.2;
-}
-#fixed-footer:hover .color-select:hover {
-  opacity: 1 !important;
-}
+  z-index: 100; }
+  #fixed-footer .color-select {
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    display: inline-block;
+    transition: all 0.5s; }
+  #fixed-footer a:focus .color-select {
+    border: 5px solid rgba(255, 255, 255, 0.75); }
+  #fixed-footer:hover .color-select {
+    opacity: 0.2; }
+    #fixed-footer:hover .color-select:hover {
+      opacity: 1 !important; }
 
 .fa-github {
   font-size: 1.6rem;
   width: 60px;
   position: absolute;
   right: 1em;
-  top: 1em;
-}
+  top: 1em; }
 
 .purple {
-  background: #6a11cb;
-}
+  background: #6a11cb; }
 
 .blue {
-  background: #2575fc;
-}
+  background: #2575fc; }
 
 .aqua {
-  background: #84fab0;
-}
+  background: #84fab0; }
 
 .green {
-  background: #56E39F;
-}
+  background: #56E39F; }
 
 .yellow {
-  background: #FDEB71;
-}
+  background: #FDEB71; }
 
 .orange {
-  background: #F7971E;
-}
+  background: #F7971E; }
 
 .red {
-  background: #ef473a;
-}
+  background: #ef473a; }
 
 .pink {
-  background: #FC5296;
-}
+  background: #FC5296; }
 
 .header {
   width: 100%;
   margin: 4em auto;
   position: relative;
-  text-align: center;
-}
-.header svg {
-  max-width: 200px;
-  margin: 0 auto;
-  display: block;
-  position: relative;
-}
+  text-align: center; }
+  .header svg {
+    max-width: 200px;
+    margin: 0 auto;
+    display: block;
+    position: relative; }
 
 .highlight {
   height: 20px;
   width: auto;
-  background: rgba(178, 133, 228, 0.15);
-}
+  background: rgba(178, 133, 228, 0.15); }
 
 .main {
   display: flex;
   flex-wrap: wrap;
   max-width: 1200px;
-  margin: 0 auto 6em;
-}
+  margin: 0 auto 6em; }
 
 .code {
   width: calc(100% * (1/6) - 10px - 1px);
   flex-grow: 1;
   margin: 0.75rem;
   cursor: pointer;
-  text-decoration: none;
-}
-.code:hover .inner-container {
-  border-top: 180px solid transparent;
-  border-bottom: 0;
-  border-right: 180px solid rgba(255, 255, 255, 0.2);
-}
+  text-decoration: none; }
+  .code:hover .inner-container {
+    border-top: 180px solid transparent;
+    border-bottom: 0;
+    border-right: 180px solid rgba(255, 255, 255, 0.2); }
+  .code:hover .container .name {
+    margin: 0 10px 20px 0;
+    opacity: 1; }
 
 .container {
   height: 40vh;
@@ -157,35 +133,34 @@ a:hover {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  position: relative;
-}
-.container .inner-container {
-  align-self: flex-end;
-  width: 0;
-  height: 0;
-  border-top: 70px solid transparent;
-  border-bottom: 0;
-  border-right: 70px solid rgba(255, 255, 255, 0.2);
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  transition: all 0.2s ease-in-out;
-}
-.container .name {
-  color: #fff;
-  font-size: 1.2rem;
-  position: relative;
-  display: block;
-  text-align: right;
-  z-index: 1;
-  margin: 0 10px 10px 0;
-}
+  position: relative; }
+  .container .inner-container {
+    align-self: flex-end;
+    width: 0;
+    height: 0;
+    border-top: 70px solid transparent;
+    border-bottom: 0;
+    border-right: 70px solid rgba(255, 255, 255, 0.2);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transition: all 0.2s ease-in-out; }
+  .container .name {
+    color: #fff;
+    font-size: 1.2rem;
+    position: relative;
+    display: block;
+    text-align: right;
+    z-index: 1;
+    margin: 0 10px 0;
+    opacity: 0;
+    transition: all 0.2s ease-in-out; }
 
 .copied:before {
   color: #999;
-  content: "Copied!";
+  content: 'Copied!';
   text-align: center;
-  font-family: "PT Mono", monospace;
+  font-family: 'PT Mono', monospace;
   font-size: 1em;
   background: #fff;
   padding: 10px;
@@ -201,75 +176,54 @@ a:hover {
   /* Opera */
   animation: cssAnimation 0s ease-in 2s forwards;
   -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
-}
+  animation-fill-mode: forwards; }
 
 @keyframes cssAnimation {
   to {
     width: 0;
     height: 0;
     padding: 0;
-    overflow: hidden;
-  }
-}
+    overflow: hidden; } }
 @-webkit-keyframes cssAnimation {
   to {
     width: 0;
     height: 0;
     padding: 0;
-    visibility: hidden;
-  }
-}
+    visibility: hidden; } }
 @media (max-width: 1080px) {
   .main {
-    justify-content: space-between;
-  }
+    justify-content: space-between; }
 
   .code {
-    width: 46%;
-  }
-}
+    width: 46%; } }
 @media only screen and (max-device-width: 480px) {
   .main {
     display: block;
-    padding: 1em;
-  }
+    padding: 1em; }
 
   .code {
     width: 100%;
-    margin: 0 0 1rem;
-  }
+    margin: 0 0 1rem; }
 
   .header svg {
-    max-width: 360px;
-  }
+    max-width: 360px; }
 
   .container {
-    max-height: 360px;
-  }
+    max-height: 360px; }
 
   .container .name {
     font-size: 3rem;
-    margin: 0 20px 20px 0;
-  }
+    margin: 0 20px 20px 0; }
 
   .inner-container {
-    display: none;
-  }
+    display: none; }
 
   .copied:before {
     font-size: 2.5em;
-    width: 200px;
-  }
+    width: 200px; }
 
   p {
-    font-size: 16px;
-  }
-}
+    font-size: 16px; } }
 @media only screen and (max-device-width: 768px) {
   #fixed-footer {
-    display: none;
-  }
-}
-
-/*# sourceMappingURL=styles.css.map */
+    display: none; } }
