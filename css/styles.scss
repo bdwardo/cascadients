@@ -18,6 +18,8 @@ p {
     line-height: 1.45rem;
     padding: 0 1em;
     font-size: 14px;
+    max-width: 600px;
+    margin: 1em auto;
 }
 
 a {
@@ -67,13 +69,13 @@ a {
     height: 28px;
     width: 28px;
     border-radius: 50%;
-    border: $borderWidth solid #fff;
+    border: $borderWidth solid rgba(255,255,255, 0.7);
     display: inline-block;
     transition: all 0.5s;
   }
 
   a:focus .color-select {
-    border: $borderWidth solid rgba(255,255,255, 0.75);
+    border: $borderWidth solid transparent;
   }
 
   &:hover {
@@ -272,12 +274,12 @@ a {
 
     .main {
         display: block;
-        padding: 1em;
+        padding: 2em;
     }
 
     .code {
     width: 100%;
-    margin: 0 0 1rem;
+    margin: 0 0 2em;
     }
 
     .header svg {
@@ -286,6 +288,7 @@ a {
 
     .container {
         max-height: 360px;
+        border-radius: 12px;
     }
 
     .container .name {
