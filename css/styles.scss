@@ -1,7 +1,6 @@
 @import url(https://use.fontawesome.com/releases/v5.1.1/css/all.css);
 @import url('https://fonts.googleapis.com/css?family=PT+Mono');
 
-
 $maxWidth: 1200px;
 $borderWidth: 5px;
 $base1: #ffb199;
@@ -153,7 +152,6 @@ a {
 
 .main {
   display: flex;
-  // justify-content: space-between;
   flex-wrap: wrap;
   max-width: $maxWidth;
   margin: 0 auto 6em;
@@ -184,7 +182,6 @@ a {
   height: 40vh;
   max-height: 260px;
   border-radius: 6px;
-  // flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -266,7 +263,7 @@ a {
     }
 
     .code {
-    width: 46%;
+        width: 46%;
     }
 }
 
@@ -278,12 +275,16 @@ a {
     }
 
     .code {
-    width: 100%;
-    margin: 0 0 2em;
+        width: 100%;
+        margin: 0 0 2em;
+    }
+
+    .header {
+        margin: 2em auto 0.5em;
     }
 
     .header svg {
-        max-width: 360px;
+        max-width: 200px;
     }
 
     .container {
@@ -292,7 +293,7 @@ a {
     }
 
     .container .name {
-        font-size: 3rem;
+        visibility: hidden;
         margin: 0 20px 20px 0;
     }
 
@@ -301,12 +302,14 @@ a {
     }
 
     .copied:before {
-        font-size: 2.5em;
-        width: 200px;
+        border-radius: 8px;
+        font-size: 1.5em;
+        width: 140px;
     }
 
     p {
-        font-size: 16px;
+        font-size: 14px;
+        padding: 0 2em;
     }
 }
 
